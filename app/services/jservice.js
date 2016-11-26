@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.jsonService', []).factory('jsonService', function($http) {
+angular.module('myApp.commService', []).factory('commService', function($http) {
     var promise;
     var jsondata = {
         get: function() {

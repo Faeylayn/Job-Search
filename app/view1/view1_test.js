@@ -3,7 +3,7 @@
 describe('myApp.view1 module', function() {
 
   beforeEach(module('myApp.view1'));
-  beforeEach(module('myApp.jsonService'));
+  beforeEach(module('myApp.commService'));
   beforeEach(module('myApp.parseService'));
 
   describe('view1 controller', function(){

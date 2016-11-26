@@ -5,7 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.view1',
   'myApp.version',
-  'myApp.jsonService',
+  'myApp.commService',
   'myApp.parseService',
   'myApp.postList'
 ]).
