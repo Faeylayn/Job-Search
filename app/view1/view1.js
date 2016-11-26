@@ -11,7 +11,7 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', ['commService', 'parseService', '$scope',
   function(commService, parseService, $scope) {
-    commService.get();
+    commService.get('https://api-v2.themuse.com/jobs?page=1');
 
 
 }]);
