@@ -1,0 +1,17 @@
+<h1>Post Parser</h1>
+
+<ul class="menu">
+  <li>Top Posts <input type="radio" name="posts" value="top" ng-model="postDisplay"></li>
+  <li>Daily Top Posts <input type="radio" name="posts" value="daily" ng-model="postDisplay"></li>
+  <li>Other Posts <input type="radio" name="posts" value="other" ng-model="postDisplay"></li>
+  <li>Posts Summary <input type="radio" name="posts" value="summary" ng-model="postDisplay"></li>
+</ul>
+
+
+<post-list posts='posts.topPosts' display='postDisplay' display-condition="'top'"></post-list>
+<post-list posts='posts.dailyPosts' display='postDisplay' display-condition="'daily'"></post-list>
+<post-list posts='posts.otherPosts' display='postDisplay' display-condition="'other'"></post-list>
+
+<ul>
+  <li ng-repeat='post in posts.summaryPosts' ng-hide="postDisplay != 'summary'">{{post}}</li>
+</ul>
