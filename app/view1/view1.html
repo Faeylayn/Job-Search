@@ -1,4 +1,10 @@
 <h1>Job Search</h1>
 
-
-<post-list posts='posts.topPosts' display='postDisplay' display-condition="'top'"></post-list>
+<ul>
+  <li ng-repeat="result in results"><ul>
+    <li>{{result.company.name}}</li>
+    <li><h1>{{result.name}}</h1></li>
+    <li>{{result.contents}}</li>
+    <li><a ng-href="{{result.refs.landing_page}}">Link here</a></li>
+  </ul></li>
+</ul>

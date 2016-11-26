@@ -18,7 +18,8 @@ angular.module('myApp.view1', ['ngRoute'])
 
     function fireSearch() {
       commService.get(buildApiEndpoint()).then(function(response) {
-        $scope.results = response.data;
+        $scope.results = response.data.results;
+        console.log($scope.results);
       })
     }
 
