@@ -11,7 +11,29 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('View1Ctrl', ['commService', 'parseService', '$scope',
   function(commService, parseService, $scope) {
-    commService.get('https://api-v2.themuse.com/jobs?page=1');
 
+    var options = ['company', 'category', 'level', 'location']
+    $scope.options = {};
+    $scope.page = 1;
+
+    function fireSearch() {
+      commService.get(buildApiEndpoint()).then(function(response) {
+        $scope.results = response.data;
+      })
+    }
+
+    function buildApiEndpoint() {
+      var base = 'https://api-v2.themuse.com/jobs?'
+      options.forEach(function(option) {
+        if ($scope.options[option] && $scope.options[option].length) {
+          $scope.options[option].params.forEach(function(param) {
+            base += option + "=" + param + "&";
+          })
+        }
+      })
+      return base + "page=" + $scope.page;
+    }
+
+    fireSearch()
 
 }]);
