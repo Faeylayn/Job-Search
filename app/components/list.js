@@ -1,14 +1,12 @@
 'use strict';
 
-angular.module('myApp.postList', [])
+angular.module('myApp.resultList', [])
 
-.directive('postList', function() {
+.directive('resultList', function() {
   return {
     restrict: 'E',
     scope: {
-      posts: '=posts',
-      postDisplay: '=display',
-      displayCondition: '=displayCondition'
+      results: '=results',
     },
     templateUrl: 'components/list.html'
   };

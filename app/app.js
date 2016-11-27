@@ -7,7 +7,7 @@ angular.module('myApp', [
   'myApp.version',
   'myApp.commService',
   'myApp.parseService',
-  'myApp.postList'
+  'myApp.resultList'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 

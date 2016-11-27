@@ -1,10 +1,7 @@
 <ul>
-  <li ng-repeat='post in posts' ng-hide="postDisplay != displayCondition">
-    <div class="post-title">
-      Post # - {{post.id}} | {{post.title}} | written: {{post.timestamp}}
-    </div>
-    <div class="post-body">
-      Views - {{post.views}} | Comments - {{post.comments}} | Likes - {{post.likes}}
-    </div>
-  </li>
+  <li ng-repeat="result in results"><ul>
+    <li><h1>{{result.company.name}} | {{result.name}}</h1></li>
+    <li ng-bind-html="result.trustedResult"></li>
+    <li><a ng-href="{{result.refs.landing_page}}">Link here</a></li>
+  </ul></li>
 </ul>

@@ -22,7 +22,6 @@ angular.module('myApp.view1', ['ngRoute'])
         $scope.results.forEach(function(result) {
           result.trustedResult = $sce.trustAsHtml(result.contents)
         })
-        console.log($scope.results);
       })
     }
 
