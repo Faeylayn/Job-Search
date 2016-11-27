@@ -9,8 +9,8 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', ['commService', 'parseService', '$scope',
-  function(commService, parseService, $scope) {
+.controller('View1Ctrl', ['commService', 'parseService', '$scope', '$sce',
+  function(commService, parseService, $scope, $sce) {
 
     var options = ['company', 'category', 'level', 'location']
     $scope.options = {};
@@ -19,6 +19,9 @@ angular.module('myApp.view1', ['ngRoute'])
     function fireSearch() {
       commService.get(buildApiEndpoint()).then(function(response) {
         $scope.results = response.data.results;
+        $scope.results.forEach(function(result) {
+          result.trustedResult = $sce.trustAsHtml(result.contents)
+        })
         console.log($scope.results);
       })
     }
