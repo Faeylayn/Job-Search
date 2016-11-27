@@ -1,3 +1,17 @@
 <h1>Job Search</h1>
 
+<div>
+  <input type="checkbox" name="Entry" value="Entry" ng-click="handleCheckbox('level', 'Entry Level')">
+  <input type="checkbox" name="Entry" value="Entry" ng-click="handleCheckbox('level', 'Senior Level')">
+  <input type="checkbox" name="Entry" value="Entry" ng-click="handleCheckbox('level', 'Mid Level')">
+  <input type="checkbox" name="Entry" value="Entry" ng-click="handleCheckbox('level', 'Internship')">
+</div>
+
+<div>
+  <input type="checkbox" ng-repeat="cat in categories" ng-click="handleCheckbox('category', cat)">
+</div>
+
+
+<button type="button" ng-click="fireSearch()">Search</button>
+
 <result-list results="results"></result-list>
