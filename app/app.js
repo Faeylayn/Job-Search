@@ -7,7 +7,8 @@ angular.module('myApp', [
   'myApp.version',
   'myApp.commService',
   'myApp.parseService',
-  'myApp.resultList'
+  'myApp.resultList',
+  'myApp.checkboxes'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 

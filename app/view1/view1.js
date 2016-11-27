@@ -14,12 +14,18 @@ angular.module('myApp.view1', ['ngRoute'])
 
     var options = ['company', 'category', 'level', 'location']
 
+    $scope.levels = ['Internship', 'Entry Level', 'Mid Level', 'Senior Level']
+
     $scope.categories = ['Account Management', 'Business & Strategy', 'Creative & Design',
     'Customer Service', 'Data Science', 'Editorial', 'Education', 'Engineering',
     'Finance', 'Fundraising & Development', 'Healthcare & Medicine', 'HR & Recruiting',
     'Legal', 'Marketing & PR', 'Operations', 'Project & Product Management',
     'Retail', 'Sales', 'Social Media & Community']
 
+
+    $scope.locations = ['New York City Metro Area', 'San Francisco Bay Area',
+    'Los Angeles, CA', 'Chicago, IL', 'Flexible / Remote', 'Washington DC Metro Area',
+    'Austin, TX', 'Boston Metro Area', 'Atlanta, GA', 'Seattle, WA', 'Bellevue, WA']
 
     $scope.options = {
       level: [],
@@ -45,9 +51,6 @@ angular.module('myApp.view1', ['ngRoute'])
       options.forEach(function(option) {
         if ($scope.options[option] && $scope.options[option].length) {
           $scope.options[option].forEach(function(param) {
-            // if (param.indexOf('&') > -1) {
-            //   param.splice(param.indexOf('&'))
-            // }
             base += option + "=" + encodeURIComponent(param) + "&";
           })
         }
