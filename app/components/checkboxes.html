@@ -1,3 +1,8 @@
-<div>
-  <input type="checkbox" ng-repeat="option in options" ng-click="handler(optionName, option)">
-</div>
+<ul>
+  <li><h1>{{optionName}}</h1></li>
+  <li ng-repeat="option in options">
+    <label> {{option}}
+      <input type="checkbox"ng-click="handler(optionName, option)">
+    </label>
+  </li>
+</ul>

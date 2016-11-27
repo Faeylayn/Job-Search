@@ -1,11 +1,11 @@
 <h1>Job Search</h1>
 
 <checkboxes options="levels" handler="handleCheckbox" option-name="'level'"></checkboxes>
-
 <checkboxes options="categories" handler="handleCheckbox" option-name="'category'"></checkboxes>
-
 <checkboxes options="locations" handler="handleCheckbox" option-name="'location'"></checkboxes>
 
 <button type="button" ng-click="fireSearch()">Search</button>
 
 <result-list results="results"></result-list>
+
+<a ng-click="nextPage()">Next Page</a> Current Page {{page}} <a ng-click="prevPage()">Previous Page</a>
