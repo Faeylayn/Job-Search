@@ -16,7 +16,6 @@ angular.module('myApp.view1', ['ngRoute'])
 
     $scope.levels = ['Internship', 'Entry Level', 'Mid Level', 'Senior Level']
 
-
     //As there didn't appear to be any way to query for the allowed parameters to just set it up, we wrote it out this way so it only needed to be written out once
     $scope.categories = ['Account Management', 'Business & Strategy', 'Creative & Design',
     'Customer Service', 'Data Science', 'Editorial', 'Education', 'Engineering',
@@ -59,6 +58,7 @@ angular.module('myApp.view1', ['ngRoute'])
     }
 
     $scope.handleCheckbox = function(option, value) {
+      //This toggles the checkbox and sets the value in the options array or removes it if need be
       var idx = $scope.options[option].indexOf(value);
        if (idx > -1) {
          $scope.options[option].splice(idx, 1);
@@ -68,6 +68,7 @@ angular.module('myApp.view1', ['ngRoute'])
     }
 
     $scope.prevPage = function() {
+      // This is mostly to prevent the user from doing something odd like unhiding the button and trying to go back before page 1
       if ($scope.page > 1) {
         $scope.page -= 1;
         $scope.fireSearch();
