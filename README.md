@@ -1,4 +1,4 @@
-# Top Posts Parsing app
+# Job Search app
 
 
 ## Getting Started
@@ -34,7 +34,7 @@ this server is:
 npm start
 ```
 
-Now browse to the app at `http://localhost:8000/index.html`.
+Now browse to the app at `http://localhost:8000/`.
 
 
 ## Running Unit Tests
