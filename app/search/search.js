@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute'])
+angular.module('myApp.search', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
+  $routeProvider.when('/search', {
+    templateUrl: 'search/search.html',
+    controller: 'SearchCtrl'
   });
 }])
 
-.controller('View1Ctrl', ['commService', 'parseService', '$scope', '$sce',
+.controller('SearchCtrl', ['commService', 'parseService', '$scope', '$sce',
   function(commService, parseService, $scope, $sce) {
 
     var options = ['company', 'category', 'level', 'location']
