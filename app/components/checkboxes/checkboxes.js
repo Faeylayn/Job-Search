@@ -10,6 +10,6 @@ angular.module('myApp.checkboxes', [])
       handler: '=handler',
       optionName: '=optionName'
     },
-    templateUrl: 'components/checkboxes.html'
+    templateUrl: 'components/checkboxes/checkboxes.html'
   };
 });

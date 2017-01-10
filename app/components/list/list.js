@@ -9,6 +9,6 @@ angular.module('myApp.resultList', [])
       results: '=results',
       buttonFunc: '=buttonFunc'
     },
-    templateUrl: 'components/list.html'
+    templateUrl: 'components/list/list.html'
   };
 });
