@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.search',
+  'myApp.list',
   'myApp.version',
   'myApp.commService',
   'myApp.parseService',
@@ -12,5 +13,5 @@ angular.module('myApp', [
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
 
-  $routeProvider.otherwise({redirectTo: '/search'});
+  // $routeProvider.otherwise({redirectTo: '/search'});
 }]);

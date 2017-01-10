@@ -12,5 +12,8 @@ angular.module('myApp.list', ['ngRoute'])
 .controller('ListCtrl', ['commService', 'parseService', '$scope', '$sce',
   function(commService, parseService, $scope, $sce) {
 
+    commService.get('localhost:5000/listings').then(function(data) {
+      console.log(data);
+    })
 
 }]);
