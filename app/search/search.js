@@ -85,7 +85,9 @@ angular.module('myApp.search', ['ngRoute'])
     }
 
     $scope.addListing = function(listing) {
-      commService.post()
+      commService.post('http://localhost:5000/listings', listing).then(function(response) {
+        console.log(response);
+      })
     }
 
 
