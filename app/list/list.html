@@ -1,1 +1,11 @@
-<h1>List (coming soon)</h1>
+<h1>Listings List (coming soon)</h1>
+
+
+<h3>Listings</h3>
+<ul>
+  <li ng-repeat="listing in lstings">
+    <h3>{{listing.ListingName}}</h3>
+    <span>{{listing.ListingCompany}}</span>
+    <a href="{{listing.Link}}">Click here to go to the Muse</a>
+  </li>
+</ul>
