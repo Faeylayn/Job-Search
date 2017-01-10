@@ -84,8 +84,8 @@ angular.module('myApp.search', ['ngRoute'])
       $scope.fireSearch();
     }
 
-    $scope.addListing = function() {
-      
+    $scope.addListing = function(listing) {
+      commService.post()
     }
 
 
