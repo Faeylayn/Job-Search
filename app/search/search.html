@@ -9,6 +9,6 @@
 
 <button type="button" ng-click="fireSearch()">Search</button>
 
-<result-list results="results"></result-list>
+<result-list results="results" button-func="addListing"></result-list>
 
 <button type="button" ng-show="page > 1" ng-click="prevPage()">Previous Page</button> Current Page {{page}} <button type="button" ng-show="results.length" ng-click="nextPage()">Next Page</button>

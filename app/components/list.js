@@ -7,6 +7,7 @@ angular.module('myApp.resultList', [])
     restrict: 'E',
     scope: {
       results: '=results',
+      buttonFunc: '=buttonFunc'
     },
     templateUrl: 'components/list.html'
   };
