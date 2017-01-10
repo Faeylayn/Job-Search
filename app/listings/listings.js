@@ -13,7 +13,6 @@ angular.module('myApp.list', ['ngRoute'])
   function(commService, parseService, $scope, $sce, $route) {
 
     commService.get('http://localhost:5000/listings').then(function(data) {
-      console.log(data);
       $scope.listings = data.data.listings;
     })
 
@@ -24,8 +23,7 @@ angular.module('myApp.list', ['ngRoute'])
         Link: $scope.Link,
         ResultPage: $scope.ResultPage,
       }
-      console.log(payload);
-      commService.post('http://localhost:5000/listings', payload).then(function(response) {
+      commService.post('http://localhost:5000/listings', payload).then(function() {
         $route.reload();
       })
     }
