@@ -5,6 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'myApp.search',
   'myApp.list',
+  'myApp.detail',
   'myApp.version',
   'myApp.commService',
   'myApp.parseService',
